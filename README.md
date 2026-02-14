@@ -25,3 +25,11 @@ The workflow includes dataset preparation, label verification, model training, a
 ---
 
 ## Project Structure
+```
+cat-yolo-detector/
+├── train.py
+├── train_label_confirmation.py
+├── cat_config.yaml
+├── sample_images/
+└── README.md
+```
