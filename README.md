@@ -33,3 +33,42 @@ cat-yolo-detector/
 ├── sample_images/
 └── README.md
 ```
+
+---
+
+## Sample Results
+Example input and detection outputs are provided in the `sample_images` directory.
+
+- `input_cat*.jpg` : Original images  
+- `result_cat*.jpg` : Detection results  
+
+---
+
+## How to Train
+1. Prepare dataset following YOLO format  
+2. Configure `cat_config.yaml`
+3. Run:
+
+```bash
+python train.py
+```
+
+---
+
+## Notes
+- Model weights (`.pt`) and dataset are excluded from this repository due to size considerations.
+- Paths should be adjusted depending on environment.
+
+---
+
+## Future Improvements
+- Hyperparameter tuning
+- Dataset expansion
+- Streamlit demo interface
+- Model performance evaluation metrics visualization
+
+---
+
+## Author
+Machine Learning / Computer Vision focused developer  
+Portfolio in progress
