@@ -8,14 +8,14 @@ Created on Fri Aug 15 11:39:21 2025
 import cv2
 import os
 
-# 確認したいデータセットのパス
+# データセットのパス
 data_path = 'C:/Users/kedad/OneDrive/デスクトップ/cat/cat_dataset'
 image_dir = os.path.join(data_path, 'images/train')
 label_dir = os.path.join(data_path, 'labels/train')
-output_dir = 'labeled_images' # 新しい出力フォルダ名
+output_dir = 'labeled_images' 
 
-# YAMLファイルからクラス名を読み込む
-names = {0: 'tsumugi', 1: 'aoi', 2: 'nagisa'} # cat_config.yamlのnamesと一致させる
+# YAMLから名を読み込む
+names = {0: 'tsumugi', 1: 'aoi', 2: 'nagisa'} 
 
 # 出力フォルダが存在しない場合は作成
 if not os.path.exists(output_dir):
@@ -34,35 +34,35 @@ def draw_labels(image_path, label_path, names):
             cls_id = int(parts[0])
             x_center, y_center, w, h = parts[1:]
 
-            # YOLO形式の座標をピクセル座標に変換
+            # YOLOの座標をピクセル座標に
             x1 = int((x_center - w/2) * width)
             y1 = int((y_center - h/2) * height)
             x2 = int((x_center + w/2) * width)
             y2 = int((y_center + h/2) * height)
 
-            # バウンディングボックスとラベル名を描画
-            color = (0, 255, 0)  # 緑色
-            font_scale = 1.0 # フォントサイズを大きく
-            thickness = 2 # 線の太さ
+            # 描画
+            color = (0, 255, 0)  
+            font_scale = 1.0 
+            thickness = 2 
 
             label = names.get(cls_id, 'unknown')
             
-            # 文字の大きさを計算
+            # 文字の大きさ計算
             (text_w, text_h), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, font_scale, thickness)
 
-            # 文字の背景を描画
+            # 文字の背景描画
             cv2.rectangle(img, (x1, y1 - text_h - 10), (x1 + text_w, y1), color, -1)
             
-            # ラベルを描画
+            # ラベル描画
             cv2.putText(img, label, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, font_scale, (0, 0, 0), thickness)
             
-            # バウンディングボックスを描画
+            # バウンディングボックス描画
             cv2.rectangle(img, (x1, y1), (x2, y2), color, thickness)
 
     return img
 
 print("ラベリング確認画像の生成を開始します...")
-# 全てのtrain画像を処理
+# train画像処理
 for filename in os.listdir(image_dir):
     if filename.lower().endswith(('.jpg', '.jpeg', '.png')):
         image_path = os.path.join(image_dir, filename)
