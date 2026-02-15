@@ -9,7 +9,7 @@ import cv2
 import os
 
 # データセットのパス
-data_path = 'C:/Users/kedad/OneDrive/デスクトップ/cat/cat_dataset'
+data_path = "./dataset"
 image_dir = os.path.join(data_path, 'images/train')
 label_dir = os.path.join(data_path, 'labels/train')
 output_dir = 'labeled_images' 
