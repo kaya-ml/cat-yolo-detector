@@ -12,7 +12,7 @@ YOLOv8をベースに、自作データセットを用いてファインチュ�
 
 | Input Image | Detection Result |
 |:---:|:---:|
-| ![Input](./sample_images/input_cat1.jpg) | ![Result](./sample_images/result_cat1.jpg) |
+| ![Input](./sample_images/input_cat1.JPG) | ![Result](./sample_images/result_cat1.jpg) |
 
 > **Point:** 似た毛色の子でも、顔の特徴や体格の差を学習させることで、高い精度で識別が可能になりました。
 > 　　　　　　また、1匹ずつだけではなく、それぞれ2匹ずつが写っている場合や3匹写っている場合でも振り分けられるようにしました。
