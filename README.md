@@ -48,15 +48,15 @@ YOLOv8をベースに、自作データセットを用いてファインチュ�
 ## Project Structure
 ```text
 cat-yolo-detector/
-├── best.pt                    # 学習済みモデル（学習結果の最高傑作）
-├── cat_config.yaml            # データセットの構成ファイル
-├── train.py                   # 学習実行用スクリプト
-├── train_label_confirmation.py # ラベルのズレ確認用
-├── sort_photos.py             # 写真・動画の自動振り分けツール（応用機能）
-├── val.py                     # モデルの精度検証用
-├── requirements.txt           # 実行に必要なライブラリ一覧
-├── sample_images/             # テスト用画像と実行結果
-└── README.md                  # このドキュメント
+├── best.pt                    　# 学習済みモデル（学習結果の最高傑作）
+├── cat_config.yaml          　  # データセットの構成ファイル
+├── train.py                　   # 学習実行用スクリプト
+├── train_label_confirmation.py  # ラベルのズレ確認用
+├── sort_photos.py           　  # 写真・動画の自動振り分けツール（応用機能）
+├── val_label_confirmation.py    # モデルの精度検証用
+├── requirements.txt          　 # 実行に必要なライブラリ一覧
+├── sample_images/           　  # テスト用画像と実行結果
+└── README.md                 　 # このドキュメント
 ```
 
 ---
