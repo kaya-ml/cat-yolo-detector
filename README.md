@@ -49,7 +49,6 @@ YOLOv8をベースに、自作データセットを用いてファインチュ�
 ---
 
 ## Project Structure
-## Project Structure
 ```text
 cat-yolo-detector/
 ├── best.pt                    　# 学習済みモデル
@@ -65,7 +64,25 @@ cat-yolo-detector/
 
 ---
 
+```markdown
 ## How to Run
-1. **Environment Setup**:
-   ```bash
-   pip install -r requirements.txt
+
+### 1. Install dependencies
+
+```bash
+pip install -r requirements.txt
+
+### 2. Train model
+
+```bash
+python train.py
+
+### 3. Validate model
+
+```bash
+python val_label_confimation.py
+
+### 4. Sort photos
+
+```bash
+python sort_photos.py
