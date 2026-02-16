@@ -66,6 +66,7 @@ cat-yolo-detector/
 
 
 ## How to Run
+
 ```markdown
 ### 1. Install dependencies
 
