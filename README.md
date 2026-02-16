@@ -76,6 +76,7 @@ pip install -r requirements.txt
 ### 2. 学習・検証（開発者向け）
 モデルを再学習したり、精度を検証したりする場合に使用します。
 <br>
+<br>
 ・学習の実行:
 ```bash
 python train.py
