@@ -67,23 +67,28 @@ cat-yolo-detector/
 
 ## How to Run
 
-```markdown
-### 1. Install dependencies
-
+### 1. 準備 (Environment Setup)
+ライブラリのインストールと、学習済みモデル(`best.pt`)の配置を確認します。
 ```bash
 pip install -r requirements.txt
-
-### 2. Train model
-
+```
+### 2. 学習・検証（開発者向け）
+モデルを再学習したり、精度を検証したりする場合に使用します。
+・学習の実行:
 ```bash
 python train.py
-
-### 3. Validate model
-
+```
+・精度の検証:
 ```bash
-python val_label_confimation.py
+python val_label_confirmation.py
+```
+・アノテーションの確認:
+```bash
+python train_label_confirmation.py
+```
 
-### 4. Sort photos
-
+### 3. 写真・動画の自動振り分け (Main Feature)
+フォルダに仕分けたいファイルを入れ、以下を実行します。
 ```bash
 python sort_photos.py
+```
