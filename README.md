@@ -64,9 +64,9 @@ cat-yolo-detector/
 
 ---
 
-```markdown
-## How to Run
 
+## How to Run
+```markdown
 ### 1. Install dependencies
 
 ```bash
