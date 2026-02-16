@@ -81,13 +81,13 @@ pip install -r requirements.txt
 ```bash
 python train.py
 ```
-・精度の検証:
-```bash
-python val_label_confirmation.py
-```
 ・アノテーションの確認:
 ```bash
 python train_label_confirmation.py
+```
+・精度の検証:
+```bash
+python val_label_confirmation.py
 ```
 
 ### 3. 写真・動画の自動振り分け (Main Feature)
