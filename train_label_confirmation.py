@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Aug 15 11:39:21 2025
-
-@author: kedad
-"""
-
 import cv2
 import os
 
@@ -61,7 +54,7 @@ def draw_labels(image_path, label_path, names):
 
     return img
 
-print("ラベリング確認画像の生成を開始します...")
+print("ラベリング確認画像の生成を開始")
 # train画像処理
 for filename in os.listdir(image_dir):
     if filename.lower().endswith(('.jpg', '.jpeg', '.png')):
@@ -72,8 +65,8 @@ for filename in os.listdir(image_dir):
             labeled_img = draw_labels(image_path, label_path, names)
             output_path = os.path.join(output_dir, filename)
             cv2.imwrite(output_path, labeled_img)
-            print(f"'{filename}' の確認画像を保存しました。")
+            print(f"'{filename}' の確認画像を保存")
         else:
-            print(f"警告: '{filename}' に対応するラベルファイルが見つかりません。")
+            print(f"警告: '{filename}' に対応するラベルファイルが見つかりません")
 
-print("ラベリング確認画像の生成が完了しました。'labeled_images'フォルダを確認してください。")
+print("ラベリング確認画像の生成が完了")
