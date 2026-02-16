@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Aug 13 14:16:55 2025
-
-@author: kedad
-"""
-
-# train.py
 from ultralytics import YOLO
 
 # 学習済みモデルのロード
