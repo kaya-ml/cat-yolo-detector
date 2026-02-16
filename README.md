@@ -17,7 +17,8 @@ YOLOv8をベースに、自作データセットを用いてファインチュ�
 |![Input](sample_images/input_cat3.JPG) | ![Result](sample_images/result_cat3.jpg)|
 
 > **Point:** 背景や体毛が似た色の子でも、顔の特徴や体格の差などを学習させることで、高い精度で識別が可能になりました。
-> また、1匹ずつだけではなく、それぞれ2匹ずつが写っている場合や3匹写っている場合でも振り分けられるようにしました。
+>
+> 　　　　　　また、1匹ずつだけではなく、それぞれ2匹ずつが写っている場合や3匹写っている場合でも振り分けられるようにしました。
 
 ---
 
@@ -69,26 +70,36 @@ cat-yolo-detector/
 
 ### 1. 準備 (Environment Setup)
 ライブラリのインストールと、学習済みモデル(`best.pt`)の配置を確認します。
+
 ```bash
 pip install -r requirements.txt
 ```
+
 ### 2. 学習・検証（開発者向け）
 モデルを再学習したり、精度を検証したりする場合に使用します。
+
 ・学習の実行:
+
 ```bash
 python train.py
 ```
+
 ・精度の検証:
+
 ```bash
 python val_label_confirmation.py
 ```
+
 ・アノテーションの確認:
+
 ```bash
 python train_label_confirmation.py
 ```
 
 ### 3. 写真・動画の自動振り分け (Main Feature)
+
 フォルダに仕分けたいファイルを入れ、以下を実行します。
+
 ```bash
 python sort_photos.py
 ```
