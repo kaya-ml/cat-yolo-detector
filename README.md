@@ -38,9 +38,13 @@ YOLOv8をベースに、自作データセットを用いてファインチュ�
 ---
 
 ## Tech Stack
+
 - Python 3.9+
-- Ultralytics (YOLOv8)
-- OpenCV (Visualization)
+- Ultralytics YOLOv8
+- OpenCV
+- MoviePy
+- NumPy
+- PyYAML
 
 ---
 
