@@ -74,16 +74,16 @@ pip install -r requirements.txt
 ```
 
 ### 2. 学習・検証（開発者向け）
-モデルを再学習したり、精度を検証したりする場合に使用します。
--・学習の実行:
+モデルを再学習したり、精度を検証したりする場合に使用します。<br>
+・学習の実行:
 ```bash
 python train.py
 ```
--・精度の検証:
+・精度の検証:
 ```bash
 python val_label_confirmation.py
 ```
--・アノテーションの確認:
+・アノテーションの確認:
 ```bash
 python train_label_confirmation.py
 ```
